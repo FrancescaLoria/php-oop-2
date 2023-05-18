@@ -1,20 +1,5 @@
 <?php 
-require('models/product.php');
-
-$newProdact = new Product("ceasar premium","","croccantini di manzo",100,3.00,0);
-$newProdact2 = new Product("LOVEDI","","cuccia rettangolare",20,18.00,0);
-$newProdact3 = new Product("YES","","treccia verde e blue",20,5.00,0);
-
-$myProducts = [
-    $newProdact,
-    $newProdact2,
-    $newProdact3,
-
-]
-
-
-
-
+require_once __DIR__ . "/db/database.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,22 +11,6 @@ $myProducts = [
     <title>PHP-OPP-2</title>
   </head>
   <body>
-    <h1 class="title">ZOOLANDIA</h1>
-    <div class="container">
-      <div class="row">
-        <?php 
-        foreach($myProducts as $product) {?>
-            <div class="card">
-                <div class="img-container"></div>
-                <div class="info-container">
-                    <ul>
-                        <li><?php echo $product->title ?></li>
-                        <li><?php echo $product->description ?></li>
-                    </ul>
-                </div>
-            </div>
-        <?php } ?>
-      </div>
-    </div>
+    
   </body>
 </html>

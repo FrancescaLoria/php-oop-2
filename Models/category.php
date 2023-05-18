@@ -1,11 +1,11 @@
 <?php 
 class Category {
     public $name;
-    public $subCategory;
+    public $poster;
 
-    function __construct($_name, SubCategory $_subCategory) {
+    function __construct($_name, $_poster = "") {
         $this->name = $_name;
-        $this->subCategory = $_subCategory;
+        $this->poster = $_poster = "";
     }
 }
 ?>
