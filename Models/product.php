@@ -16,13 +16,23 @@ class Product {
         $this->description = $_description;
         $this->quantity = $_quantity;
         $this->price = $_price;
-        $this->discount = $_discount = 0;
+        $this->discount = $_discount;
         $this->category = $_category;
     }
 
+    function checkPrice(){
+        if(!is_int($this->price)){
+            throw new Exception("Prezzo non valido, accettati solo interi");
+        }
+    }
+
     function showprice() {
-        return $this->price;
-        
+        try {
+            $this->checkPrice($this->price);
+            return $this->price;
+        } catch (Exception $error) {
+            return $error->getMessage();
+        }
     }
 }
 ?>
