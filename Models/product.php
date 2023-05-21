@@ -6,7 +6,7 @@ class Product {
     public $name;
     public $description;
     public $quantity;
-    public $price;
+    private $price;
     public $discount; 
     public $category;
 
@@ -18,6 +18,11 @@ class Product {
         $this->price = $_price;
         $this->discount = $_discount = 0;
         $this->category = $_category;
+    }
+
+    function showprice() {
+        return $this->price;
+        
     }
 }
 ?>

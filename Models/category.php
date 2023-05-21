@@ -5,7 +5,7 @@ class Category {
 
     function __construct($_name, $_poster = "") {
         $this->name = $_name;
-        $this->poster = $_poster = "";
+        $this->poster = $_poster;
     }
 }
 ?>
